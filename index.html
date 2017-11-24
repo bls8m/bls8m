@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="https://hieber.xyz/manifest.json">
+
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
+
+    <!-- https://stackoverflow.com/a/15562750 -->
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+
+    <!-- This demo uses float grid but you can use flex grid too -->
+    <!-- https://foundation.zurb.com/forum/posts/51124-sticky-for-mobile-small-screens -->
+    <!-- https://foundation.zurb.com/sites/docs/top-bar.html -->
+    <!-- https://foundation.zurb.com/sites/docs/sticky.html#sticky-navigation -->
+<div id="top-ptr"></div>
+
+    <div data-sticky-container>
+      <div class="title-bar" data-sticky data-options="stickyOn:small;marginTop:0;" style="width:100%" id="responsive-menu" data-hide-for="medium">
+        <div class="title-bar-left">
+          <span class="title-bar-title">Axel Hieber</span>
+        </div>
+        <div class="title-bar-right" >
+          <div id="menueMobile" style="display:none;">
+            <div align="right">
+                <a class="title-bar-title responsiveMenueText" id="abut-me-button">About Me</a>
+                <a class="title-bar-title responsiveMenueText" id="my-projects-button">My Projects</a>
+                <a class="title-bar-title responsiveMenueText" id="contact-button">Contact</a>
+            </div>
+          </div>
+          <div id="menueDesktop" style="display:none;">
+            <button class="menu-icon" id="menue-button" type="button" onclick="showHideMenue()"></button>
+            <div class="title-bar-title">Menu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="responsiveMenue title-bar" id="menueMobileBar" style="display:none;">
+      <div id="responsive-menu responsiveMenue">
+        <ul class="dropdown menu" data-dropdown-menu >
+          <li><a class="title-bar-title responsiveMenueText" id="abut-me-button-responsiv">About Me</a>
+          <li><a class="title-bar-title responsiveMenueText" id="my-projects-button-responsiv">My Projects</a></li>
+          <li><a class="title-bar-title responsiveMenueText" id="contact-button-responsiv">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="parallax-window " data-parallax="scroll" data-androidFix="false" id="parallax-header" ></div>
+
+
+
+  <section id="about-me">
+    <div class="ofset" >
+      <div class="grid-x fluid with-boarder-red">
+        <div class="small-1 cell with-boarder-red"> </div>
+        <div class="small-10 cell with-boarder-red">
+
+          <div class="grid-x fluid" style="height: 100%;">
+
+            <div class="large-5 cell with-boarder-red">
+              <img src="#" class="img-pos" alt="Cinque Terre" id="me-pic">
+            </div>
+            <div class="small-0 medium-1 large-0 cell"></div>
+            <div class="large-5 cell with-boarder-blue">
+
+              <div class="grid-y" id="about-me-y-grid">
+                <div class="cell small-6 toBottomParent">
+                    <div class="toBottomSpacer"></div>
+                    <div class="toBottom with-boarder-blue" id="about-me-name-txt" >Axel Hieber</div>
+                </div>
+                <div class="cell small-12">
+                  <div style="margin-top:0.5rem;">
+                     Front-End Developer and UX/UI designer, with practical experience in project management,
+                     branding strategy, and creative direction; devoted to functional programming and information
+                     architecture. Web Developer - User Experience Designer - Graphic Artist
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="small-1 cell"> </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <section id="myProjects">
+    <h1>My Projects</h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </section>
+
+
+
+
+
+
+  <section id="Contact">
+
+
+    <h1>Contact</h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <!-- <script src="js/vendor/foundation.js"></script> -->
+    <script src="js/vendor/foundation.min.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+  </body>
+</html>

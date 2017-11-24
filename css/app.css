@@ -1,0 +1,171 @@
+/* Demo Styles */
+
+.title-bar {
+  width: 100%;
+  z-index: 10;
+  transition: height .25s ease;
+  /*height: 4.5em;*/
+  height: 3em;
+  background-color: #2c3840;
+}
+
+.title-bar .title-bar-right,
+.title-bar .title-bar-left {
+  transition: padding-top .25s ease;
+  /*padding-top: 1.4em;*/
+}
+.title-bar.shrink {
+  height: 3em;
+}
+.title-bar.shrink .title-bar-right,
+.title-bar.shrink .title-bar-left {
+  padding-top: 0em;
+}
+.title-bar .dropdown.menu li {
+  float: left;
+}
+.title-bar .dropdown.menu .is-dropdown-submenu {
+  border: none;
+  background-color: #2c3840;
+}
+#root {
+  margin-top: 2em;
+}
+
+
+.ptr-offset{
+  display:block;
+  height:3rem; /* fixed header height*/
+  margin:-3rem 0 0; /* negative fixed header height */
+}
+
+
+.responsiveMenue{
+  height: 3.5em;
+  z-index: 30;
+  border-top: 1px solid white;
+  border-bottom: 2px solid white;
+  width: 100%;
+  background-color: #2c3840;
+  position:fixed;
+  top:3rem;
+  text-align: center;
+}
+.responsiveMenueText{
+
+  text-align: center;
+  color: white;
+  padding-right:1em;
+}
+.responsiveMenueText:hover{
+    text-align: center;
+    color: red;
+    text-decoration: none;
+    border-bottom: 3px solid red;
+}
+.responsiveMenueText.actived {
+  color: green;
+}
+#responsiveMenueMobile ul li { display: inline; }
+/**/
+/**/
+/**/
+.parallax-window {
+	/*min-height: 400px;*/
+  /*height: 300rem;*/
+	background: transparent;
+}
+
+.txt-extra-big{
+font-size: 400%;
+}
+.txt-big{
+font-size: 200%;
+}
+.txt-large{
+font-size: 150%;
+}
+
+/*.with-boarder-redd{
+border: 1px solid red;
+}
+.with-boarder{
+border: 4px dotted orange;
+}
+.with-boarder-blue{
+border: 1px solid blue;
+}
+.with-boarder-red{
+border: 1px solid red;
+}
+.with-boarder-green{
+border: 3px solid red;
+}
+.with-boarder-greene{
+border: 3px solid green;
+}*/
+
+/*        */
+/*about me*/
+/*start   */
+/*        */
+
+#about-me{
+  border-top: 2px solid black;
+}
+#about-me-name-txt{
+font-size: 3.5rem;
+line-height: 1.2em;
+
+
+}
+
+.ofset{
+  margin-top: -11rem;
+
+}
+
+.name-pos{
+  /*margin-top: 10px;
+    margin-bottom: 10px;*/
+
+   font-family: "Times New Roman", Times, serif;
+
+  /*margin: 0
+  padding: 0;*/
+  height:auto;
+}
+.txt-pos{
+  height:50%;
+}
+.img-pos{
+    /*margin-left: 5rem;*/
+  display: block; /*for the img inside your div */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+
+  max-width: 100%;
+
+  width: 18rem;
+  /*margin-top: auto; /*img centert*/
+  border-radius: 50%;
+}
+.toBottomParent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.toBottom{
+
+}
+
+
+
+
+
+/*        */
+/*about me*/
+/*end     */
+/*        */
