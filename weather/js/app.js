@@ -4,6 +4,19 @@ $(document).foundation()
 var latitude=0;
 var longitude=0;
 
+var tempC=0;
+var tempSel="c";
+
+function getTemp(){
+
+  if(tempSel=='c'){
+    return tempC;
+  }
+  else{
+    return tempC*(9/5) + 32;
+  }
+
+}
 
 var weatherIcon = {
   "clear sky" : '<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>',
@@ -36,14 +49,14 @@ navigator.geolocation.getCurrentPosition(function(position) {
     var weather=data.weather[0].description;
     // var weatherI=data.weather[0].description;
     var temp=data.main.temp;
-
+    tempC=temp;
     console.log( weather);
-    console.log( temp);
+    console.log( getTemp(tempC) );
     console.log(weatherIcon[weather])
 
     $("#weather").html(weather);
     $("#weatherIcons").html(weatherIcon[weather]);
-    $("#temp").html(temp+"°C");
+    $("#temp").html(getTemp(temp));
 
   })
     .done(function() {
@@ -93,6 +106,25 @@ $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+"
 
 
     $( document ).ready(function() {
+
+        $("#CorF").click(function(){
+          if($("#tempc").hasClass("textWhite")){
+            tempSel="f";
+            $("#tempc").removeClass("textWhite");
+            $("#tempf").removeClass("textGray");
+            $("#tempc").addClass("textGray");
+            $("#tempf").addClass("textWhite");
+            $("#temp").html(getTemp(temp));
+          }
+          else{
+            tempSel="c";
+            $("#tempc").removeClass("textGray");
+            $("#tempf").removeClass("textWhite");
+            $("#tempc").addClass("textWhite");
+            $("#tempf").addClass("textGray");
+            $("#temp").html(getTemp(temp));
+          }
+        });
 
         console.log( "ready!" );
     });
