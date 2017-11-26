@@ -9,12 +9,15 @@ var tempSel="c";
 
 function getTemp(){
 
+  var result=0.0;
   if(tempSel=='c'){
-    return tempC;
+    result= tempC;
   }
   else{
-    return tempC*(9/5) + 32;
+    result = tempC*(9/5) + 32;
   }
+
+  return Math.round(result * 100) / 100;
 
 }
 
