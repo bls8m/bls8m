@@ -30,7 +30,16 @@ var weatherIcon = {
   "rain" : '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
   "thunderstorm" : '<div class="icon thunder-storm"><div class="cloud"></div><div class="lightning"><div class="bolt"></div><div class="bolt"></div></div></div>',
   "snow" : '<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>',
-  "mist" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>'
+  "mist" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>',
+  "01d" : '<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>',
+  "02d" : '<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div><div class="sun"><div class="rays"></div></div></div>',
+  "03d" : '<div class="icon cloudy"><div class="cloud"></div></div>',
+  "04d" : '<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div></div>',
+  "09d": '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
+  "10d" : '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
+  "11d" : '<div class="icon thunder-storm"><div class="cloud"></div><div class="lightning"><div class="bolt"></div><div class="bolt"></div></div></div>',
+  "13d" : '<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>',
+  "50d" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>'
 };
 
 
@@ -47,18 +56,19 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
 
 
-  $.getJSON( "https://fcc-weather-api.glitch.me/api/current?lat="+latitude+"&lon="+longitude , function(data) {
+  $.getJSON( "https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid=72df659a7bc4adb6115e36ebc7163471", function(data) {
 
     var weather=data.weather[0].description;
     // var weatherI=data.weather[0].description;
     var temp=data.main.temp;
-    tempC=temp;
+    var iconApiData=data.weather[0].icon;
+    tempC=temp-273.15;  //covert Kelvin to Celsius
     console.log( weather);
     console.log( getTemp(tempC) );
     console.log(weatherIcon[weather])
 
     $("#weather").html(weather);
-    $("#weatherIcons").html(weatherIcon[weather]);
+    $("#weatherIcons").html(weatherIcon[iconApiData]);
     $("#temp").html(getTemp(temp));
 
   })
