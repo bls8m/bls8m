@@ -169,7 +169,7 @@ function setupAbutMe(){
       picSize=$("#me-pic").height();
       $(".ofset").css("margin-top",-picSize/2);
 
-      $(".parallax-window").css("height",page_height*(8/30));
+      $(".parallax-window").css("height",page_height*(10/30));
 
 
       $("#about-me-y-grid").css("height","initial");
@@ -234,6 +234,6 @@ $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
   // newSize is the name of the now-current breakpoint, oldSize is the previous breakpoint
   check_webp_feature("lossy",set_image);
 
-setupAbutMe();
+  setupAbutMe();
 
 });
