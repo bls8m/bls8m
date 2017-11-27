@@ -31,6 +31,7 @@ var weatherIcon = {
   "thunderstorm" : '<div class="icon thunder-storm"><div class="cloud"></div><div class="lightning"><div class="bolt"></div><div class="bolt"></div></div></div>',
   "snow" : '<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>',
   "mist" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>',
+
   "01d" : '<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>',
   "02d" : '<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div><div class="sun"><div class="rays"></div></div></div>',
   "03d" : '<div class="icon cloudy"><div class="cloud"></div></div>',
@@ -39,7 +40,18 @@ var weatherIcon = {
   "10d" : '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
   "11d" : '<div class="icon thunder-storm"><div class="cloud"></div><div class="lightning"><div class="bolt"></div><div class="bolt"></div></div></div>',
   "13d" : '<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>',
+  "50d" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>',
+
+  "01n" : '<div class="icon sunny"><div class="sun"><div class="rays"></div></div></div>',
+  "02n" : '<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div><div class="sun"><div class="rays"></div></div></div>',
+  "03n" : '<div class="icon cloudy"><div class="cloud"></div></div>',
+  "04n" : '<div class="icon cloudy"><div class="cloud"></div><div class="cloud"></div></div>',
+  "09n": '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
+  "10n" : '<div class="icon rainy"><div class="cloud"></div><div class="rain"></div></div>',
+  "11n" : '<div class="icon thunder-storm"><div class="cloud"></div><div class="lightning"><div class="bolt"></div><div class="bolt"></div></div></div>',
+  "13n" : '<div class="icon flurries"><div class="cloud"></div><div class="snow"><div class="flake"></div><div class="flake"></div></div></div>',
   "50d" : '<div class="icon cloudy"><div></div><div class="cloud"></div></div>'
+
 };
 
 
@@ -65,7 +77,9 @@ navigator.geolocation.getCurrentPosition(function(position) {
     tempC=temp-273.15;  //covert Kelvin to Celsius
     console.log( weather);
     console.log( getTemp(tempC) );
-    console.log(weatherIcon[weather])
+    console.log(iconApiData);
+    console.log(weatherIcon[iconApiData]);
+    console.log(weatherIcon[weather]);
 
     $("#weather").html(weather);
     $("#weatherIcons").html(weatherIcon[iconApiData]);
